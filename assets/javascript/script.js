@@ -48,6 +48,7 @@ const layer = document.querySelector("#layer");
 const filmLayer = document.querySelector("#layer2");
 const searchLayer = document.querySelector("#layer3");
 
+// --Open Menu--
 document.addEventListener("click", (e) => {
   if (e.target.id == "bars" || e.target.id == "barsIcon") {
     layer.classList.toggle("open");
@@ -58,6 +59,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// --Open Film--
 document.addEventListener("click", (e) => {
   if (e.target.id == "film" || e.target.id == "filmIcon") {
     filmLayer.classList.toggle("open");
@@ -67,6 +69,8 @@ document.addEventListener("click", (e) => {
     filmLayer.classList.remove("open");
   }
 });
+
+//--Open Searchbar--
 document.addEventListener("click", (e) => {
   if (e.target.id == "search" || e.target.id == "searchIcon") {
     searchLayer.classList.toggle("open");

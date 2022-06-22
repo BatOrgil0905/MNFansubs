@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.::МНФэнсабс хадмал орчуулгын баг::.</title>
+    <!-- --TailwindCSS-- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- --FontAwesome-- -->
+    <script src="https://kit.fontawesome.com/19e3167d97.js" crossorigin="anonymous"></script>
+    <!-- --External Style-- -->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- --SwiperJS-- -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="!bg-[#222222] overflow-x-hidden">
+    <!-- --Header-- -->
+    <header class="w-full flex border-b border-[#393939] items-center justify-between pl-4 bg-[#222222cc]">
+        <div class="flex items-center justify-between">
+            <img id="mainLogo" class="w-1/2 md:w-1/4 lg:w-1/6 py-2" src="./assets/images/logo-white.png" alt="">
+            <div class="flex">
+                <!-- --Search section-- -->
+                <div id="search" class="relative px-4 w-[50px] h-[60px] border-l border-[#393939] py-5 group">
+                    <i id="searchIcon" class="fa-solid fa-magnifying-glass text-lg text-gray-500 duration-300 group-hover:text-[#00b3ff]"></i>
+                    <div id="layer3" class="absolute top-full w-[375px] h-20 bg-[#00b3ff] right-[-100px] flex flex-col justify-between">
+                        <div class="h-[3px] bg-[#00b3ff] w-full"></div>
+                        <!-- --Search menu-- -->
+                        <div class="flex items-center !my-auto">
+                            <input class="relative w-full mx-6 py-2 px-4 rounded-lg group" type="search" placeholder="Хайлт...">
+                            <i class="fa-solid fa-magnifying-glass absolute right-9 text-lg group-hover:text-[#00b3ff]"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- film section-- -->
+                <div id="film" class="relative px-4 w-[50px] h-[60px] border-l border-[#393939] py-5 group">
+                    <i id="filmIcon" class="fa-solid fa-film text-lg text-gray-500 duration-300 group-hover:text-[#00b3ff]"></i>
+                    <div id="layer2" class="absolute top-full w-[375px] h-[445px] bg-[#161616] right-[-50px] flex flex-col ">
+                        <div class="h-[3px] bg-[#00b3ff] w-full"></div>
+                        <!-- --Film Menu-- -->
+                        <div class="w-full px-[3%] flex flex-col">
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4 group">
+                                    <i class="fa-solid fa-table-cells text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Бүх төслүүд</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-table-cells text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Бүх гаралтууд</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-clock text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Орчуулж байгаа</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-file-video text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Орчуулж дуусгасан</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-video text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Анимэ кино</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-video text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Цуврал кино</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-video text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Кино</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bars section-- -->
+                <div id="bars" class="relative px-4 w-[50px] h-[60px] border-l border-[#393939] py-5 group">
+                    <i id="barsIcon" class="fa-solid fa-bars text-lg text-gray-500 duration-300 group-hover:text-[#00b3ff]"></i>
+                    <div id="layer" class="absolute top-full w-[375px] h-80 bg-[#161616] right-0 flex flex-col ">
+                        <div class="h-[3px] bg-[#00b3ff] w-full"></div>
+                        <!-- --Layer Menu-- -->
+                        <div class="w-full px-[3%] flex flex-col">
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4 group">
+                                    <i class="fa-solid fa-arrow-right-to-bracket text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Нэвтрэх</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-500">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-heart text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Хандивын нөхцөл</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-eye text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Үзсэн гаралт</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-eye text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                    <p class="text-lg text-gray-300 px-3 hover:text-[#00b3ff]">Үзсэн гаралт</p>
+                                </div>
+                                <div class="flex items-center p-4">
+                                    <i class="fa-solid fa-angle-right text-gray-500 text-lg hover:text-[#00b3ff]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="mt-6 px-[6%]">
+        <!-- 4x3 anime grids -->
+        <div class="container grid mx-auto gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/1.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/2.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/3.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/4.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/5.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/6.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/7.png" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/8.png" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/9.png" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/10.png" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/11.png" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>>
+            </div>
+            <div class="overlay w-full h-[200px] relative group">
+                <img class="w-full h-full rounded-lg object-cover" src="./assets/images/anime movie/12.jpg" alt="">
+                <div class="flex items-end">
+                    <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-md duration-300 group-hover:text-[#00b3ff]">Test</p>
+                </div>>
+            </div>
+        </div>
+        <div class="container w-full my-4 bg-black rounded-lg mx-auto h-[35px] duration-500 hover:bg-[#00b3ff]">
+            <p class="text-white text-center pt-1">Цааш нь</p>
+        </div>
+
+        <!-- --banner-- -->
+        <div class="my-4">
+            <img class="w-full lg:w-[80%] mx-auto h-auto lg:h-auto" src="./assets/images/banner.jpg" alt="">
+        </div>
+    </section>
+
+
+    <!-- Swiper section -->
+    <section class="mt-5 mb-7 px-[6%]">
+        <!-- Finished animes swiper- -->
+        <div class="flex flex-col">
+            <p class="text-lg text-gray-300">Дуусгасан анимэнууд</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/5.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes we already have/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Animes that are translating swiper -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Оруулж байгаа анимууд</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/1.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/3.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/anime's right now/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Anime film's swiper -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Анимэ кинонууд</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/animes/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Netflix swiper -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Нэтфликсийн цуврал</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="h-full w-full rounded-lg" src="./assets/images/netflix/6.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Makoto Shinkai's scenerio swiper -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Найруулагч Шинкай Макотон цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Makoto Shinka's art/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Hosoda Mamoru's artwork swiper-- -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Найруулагч Хосода Маморүгийн цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/1.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/5.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/Hosoda Mamoru's art/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Kon Satoshi's masterpiece swiper-- -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Найруулагч Кон Сатошигийн цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/kon satoshi's art/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Ghibli's collection swiper-- -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Жибли цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/3.png" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/ghibli collection/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        <!-- ---Shounen anime swiper--- -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Шоонэн анимэ цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid mx-auto gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 2xl:grid-cols-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/1.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/shonen collection/6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <!-- Jojo's swiper collection-- -->
+        <div class="mt-3 flex flex-col">
+            <p class="text-lg text-gray-300">Жожогийн цуглуулга</p>
+            <div class="swiper mySwiper container my-2 grid gap-4 ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo2_poster_m.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo2.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo3.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo4.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo5.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-full h-full group">
+                        <img class="w-full h-full rounded-lg" src="./assets/images/jojo's collection/jojo6.jpg" alt="">
+                        <div class="flex items-end">
+                            <p class="absolute bottom-1 px-4 cursor-pointer text-white text-lg md:text-md lg:text-sm invisible duration-300 group-hover:visible group-hover:text-[#00b3ff]">Test1</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+<!-- --Footer-- -->
+    <footer class="border-t border-[#393939] relative bottom-0 bg-[#222222cc]">
+        <div class="flex flex-col">
+            <div class="flex flex-row justify-end">
+                <div class="px-4 w-[50px] h-[60px] border-l border-[#393939] py-4 group">
+                    <i class="fa-brands fa-facebook-f text-gray-300 duration-300 group-hover:text-[#00b3ff]"></i>
+                </div>
+                <div class="px-4 w-[50px] h-[60px] border-l border-[#393939] py-4 group">
+                    <i class="fa-brands fa-youtube text-gray-300 duration-300 group-hover:text-[#00b3ff]"></i>
+                </div>
+                <div class="px-4 w-[50px] h-[60px] border-l border-[#393939] py-4 group">
+                    <i class="fa-brands fa-instagram text-gray-300 duration-300 group-hover:text-[#00b3ff]"></i>
+                </div>
+            </div>
+            <div class="border-t border-[#393939] bg-[#222222cc]">
+                <p class="text-gray-200 text-center py-6">MNFansubs © 2007-2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/javascript/script.js"></script>
+
+</body>
+</html>
+
+<!-- // Author: Bat-Orgil Baatar 06/04/22
+// P.S Do not use without the author's permission. Otherwise you'll be sentenced by the worst punishment
+
+// P.P.S Well you can use the whole code with or without my permission i was just joking. Fell free to use and copy anything.
+// P.P.P.S Hey don't change or steal anything only copy. Show some respect to author and don't be an a$$hole. -->

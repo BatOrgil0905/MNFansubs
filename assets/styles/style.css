@@ -1,0 +1,89 @@
+/* Menu section */
+#layer::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #00b3ff;
+  right: 19px;
+}
+#layer {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+#layer2::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #00b3ff;
+  right: 68px;
+}
+#layer2 {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+#layer3::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #00b3ff;
+  right: 117px;
+}
+#layer3 {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 999;
+}
+/* Tryna make this swiper more smooth */
+.swiper-slide {
+  transition: 0.3s all ease;
+}
+
+/* --Overlay-- */
+.swiper-slide {
+  position: relative;
+}
+.swiper-slide:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: 0.5s ease;
+  background: linear-gradient(to bottom, transparent 0%, black 110%);
+  border-radius: 2%;
+}
+.swiper-slide:hover:before {
+  height: 100%;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  transition: 0.5s ease;
+  background: linear-gradient(to bottom, transparent 0%, black 120%);
+  border-radius: 2.5%;
+}
